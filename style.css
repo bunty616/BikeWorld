@@ -1,0 +1,370 @@
+        :root {
+            --primary-color: #ff6600;
+            --dark-color: #1a1a1a;
+            --gray-color: #4a4a4a;
+            --light-gray-color: #f4f4f4;
+            --white-color: #ffffff;
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            --card-radius: 16px;
+        }
+
+        /* --- Global Styles & Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white-color);
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        header.sticky {
+            background-color: var(--white-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--dark-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 22px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #e65c00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url('https://placehold.co/1920x1080/1a1a1a/f4f4f4?text=BikeWorld') no-repeat center center/cover;
+            position: relative;
+            color: var(--white-color);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 500px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .search-bar {
+            display: flex;
+            background: var(--white-color);
+            border-radius: var(--card-radius);
+            padding: 10px;
+            max-width: 550px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            padding: 0 15px;
+            background: transparent;
+            color: var(--dark-color);
+        }
+        
+        .search-bar input::placeholder {
+            color: #999;
+        }
+
+        .search-bar .btn-primary {
+            border-radius: 12px;
+        }
+
+        /* --- Categories Section --- */
+        .categories {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background: var(--white-color);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .category-card h3 {
+            padding: 20px;
+            font-size: 1.4rem;
+        }
+        
+        /* --- Featured Bikes Section --- */
+        .featured-bikes {
+            padding: 80px 0;
+            background-color: var(--light-gray-color);
+        }
+        
+        .bike-card {
+            background: var(--white-color);
+            border-radius: var(--card-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .bike-card-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .bike-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .bike-card:hover .bike-card-img img {
+            transform: scale(1.1);
+        }
+
+        .bike-card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bike-card-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .bike-specs {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray-color);
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .bike-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: auto;
+            margin-bottom: 20px;
+        }
+
+        .bike-card-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        /* Swiper Styles */
+        .swiper-container {
+            width: 100%;
+            padding: 10px 0 40px 0 !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--primary-color) !important;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white-color);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .footer-content ul {
+            list-style: none;
+        }
+        
+        .footer-content ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-content a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-color);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Simplified for demo */
+            .hero-content h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+        }
