@@ -26,6 +26,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            
         }
 
         /* --- Header & Navigation --- */
@@ -70,7 +71,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--dark-color);
+            color: #000000;
             font-weight: 500;
             position: relative;
             transition: color 0.3s ease;
@@ -95,8 +96,59 @@
             width: 100%;
         }
 
+
+        .navbar-toggler {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 15px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transition: all 0.4s ease;
+    
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .header-actions {
+    width: 100%;
+    /* display: flex; */
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+}
+
+
         .header-actions {
-            display: flex;
+            /* display: flex; */
             align-items: center;
             gap: 15px;
         }
@@ -126,7 +178,7 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            background: url('https://placehold.co/1920x1080/1a1a1a/f4f4f4?text=BikeWorld') no-repeat center center/cover;
+            background: url('https://www.financialexpress.com/wp-content/uploads/2024/01/Hero-MAVRICK.jpg') no-repeat center center/cover;
             position: relative;
             color: var(--white-color);
         }
@@ -138,7 +190,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+            /* background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%); */
         }
 
         .hero-content {
@@ -217,7 +269,7 @@
         
         .category-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 30px rgb(0 0 0 / 47%);
         }
 
         .category-card img {
@@ -230,6 +282,75 @@
             padding: 20px;
             font-size: 1.4rem;
         }
+
+        /* Brand Grid Customization */
+        .brand-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .categorie-name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+
+
+        .category-card-1 {
+            background: var(--white-color);
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category-card-1:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgb(0 0 0 / 47%);
+        }
+
+       .category-card-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.categorie-name h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .category-card-1 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .categorie-name h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card-1 {
+        width: 80px;
+        height: 80px;
+    }
+
+    .categorie-name h3 {
+        font-size: 0.8rem;
+    }
+}
         
         /* --- Featured Bikes Section --- */
         .featured-bikes {
@@ -368,3 +489,52 @@
             .hero-content h1 { font-size: 2.5rem; }
             .section-title { font-size: 2rem; }
         }
+
+
+        @media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-links { display: none; }
+  .navbar .navbar-toggler { display: block; }
+  .hero-content { text-align: center; padding: 0 20px; }
+  .search-bar { flex-direction: column; }
+  .search-bar input { width: 100%; margin-bottom: 10px; }
+}
+
+@media (max-width: 768px) {
+  .category-grid { grid-template-columns: 1fr; }
+  .bike-card-img { height: 180px; }
+  .section-title { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 2rem; }
+  .footer-content { display: flex; flex-direction: column; gap: 20px; }
+}
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: black;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-navigation {
+    position: relative;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+
