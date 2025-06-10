@@ -21,25 +21,34 @@
     <!-- Header -->
     <header id="main-header">
         <nav class="container navbar">
-            <a href="#" class="logo">Bike<span>World</span></a>
-            <ul class="nav-links">
-                <li><a href="#">New Bikes</a></li>
-                <li><a href="#">Used Bikes</a></li>
-                <li><a href="#">Electric Bikes</a></li>
-                <li><a href="#">Compare</a></li>
-                <li><a href="#">News & Reviews</a></li>
-            </ul>
-            <div class="header-actions">
-                <button class="btn btn-primary">Sell Bike</button>
-            </div>
-        </nav>
+  <a href="#" class="logo">Bike<span>World</span></a>
+
+  <!-- Hamburger icon for mobile -->
+  <div class="navbar-toggler" id="navbar-toggler">
+    ☰
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#">New Bikes</a></li>
+    <li><a href="#">Used Bikes</a></li>
+    <li><a href="#">Electric Bikes</a></li>
+    <li><a href="#">Compare</a></li>
+    <li><a href="#">News & Reviews</a></li>
+    <div class="header-actions">
+    <button class="btn btn-primary">Log in</button>
+  </div>
+  </ul>
+
+  
+</nav>
+
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
             <h1 class="hero-title">Find Your Dream Bike Today.</h1>
-            <p class="hero-subtitle">The most trusted place to buy, sell, and compare thousands of bikes in India.</p>
+            <!-- <p class="hero-subtitle">The most trusted place to buy, sell, and compare thousands of bikes in India.</p> -->
             <div class="search-bar">
                 <input type="text" placeholder="Search for bikes, brands or models...">
                 <button class="btn btn-primary">Search</button>
@@ -49,32 +58,73 @@
 
     <!-- Categories Section -->
     <section class="categories">
+        
         <div class="container">
             <h2 class="section-title">Explore Our Categories</h2>
             <div class="category-grid">
                 <div class="category-card">
-                    <img src="https://placehold.co/400x300/e8e8e8/1a1a1a?text=New+Bikes" alt="New Bikes">
+                    <img src="https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-select-model-sports-red-1707139187405.png" alt="New Bikes">
                     <h3>New Bikes</h3>
                 </div>
                 <div class="category-card">
-                    <img src="https://placehold.co/400x300/e8e8e8/1a1a1a?text=Used+Bikes" alt="Used Bikes">
+                    <img src="https://m.media-amazon.com/images/I/71Wnw7s8XHL.jpg" alt="Used Bikes">
                     <h3>Used Bikes</h3>
                 </div>
                 <div class="category-card">
-                    <img src="https://placehold.co/400x300/e8e8e8/1a1a1a?text=Electric+Bikes" alt="Electric Bikes">
+                    <img src="https://www.rentrip.in/uploads/products/bike/500x350/593184IMG_1659702505.webp" alt="Electric Bikes">
                     <h3>Electric Bikes</h3>
                 </div>
                  <div class="category-card">
-                    <img src="https://placehold.co/400x300/e8e8e8/1a1a1a?text=Compare" alt="Compare Bikes">
+                    <img src="https://img.autocarindia.com/model/uploads/modelimages/Honda-Bikes-CB350RS-030320211727.jpg?w=872&h=578&q=75&c=1" alt="Compare Bikes">
                     <h3>Compare Bikes</h3>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explore By Brands</h2>
+            <div class="category-grid brand-grid">
+                <div class="categorie-name" data-brand="Hero">
+                <div class="category-card-1" style="border: solid 3px rgb(0, 0, 0);">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/12/Hero-Logo.png"  alt="Hero"> 
+                </div>
+                <h3>Hero</h3>
+                </div>
+
+                <div class="categorie-name" data-brand="Honda">
+                <div class="category-card-1" style="border: solid 3px red;">
+                    <img src="https://fellowstudio.com/wp-content/uploads/2024/02/honda-logo-1.png" alt="Honda">
+                    </div>
+                    <h3>Honda</h3>
+                </div>
+
+
+                <div class="categorie-name" data-brand="Bajaj">
+                <div class="category-card-1"  style="border: solid 3px #0064B2">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/07/Bajaj-logo.jpg" alt="Bajaj">
+                </div>
+                    <h3>Bajaj</h3>
+                </div>
+
+                <div class="categorie-name" data-brand="TVS">
+                 <div class="category-card-1" style="border: solid 3px #0C3688">
+                    <img src="https://static.vecteezy.com/system/resources/previews/020/336/393/non_2x/tvs-logo-tvs-icon-transparent-png-free-vector.jpg" alt="Compare Bikes">
+                    </div>
+                    <h3>TVS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
     <!-- Featured Bikes Section -->
     <section class="featured-bikes">
-        <div class="container">
+<div class="swiper-navigation">
+    <div class="swiper-button-prev"></div>
+        
+        <div class="container" style="overflow: hidden;">
             <h2 class="section-title">Featured Bikes</h2>
             <!-- Swiper -->
             <div class="swiper-container featured-slider">
@@ -85,7 +135,11 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-    </section>
+         <div class="swiper-button-next"></div>
+</div>
+    </section>   
+
+
 
     <!-- Footer -->
     <footer>
