@@ -178,7 +178,7 @@
             height: 100vh;
             display: flex;
             align-items: center;
-            background: url('https://www.financialexpress.com/wp-content/uploads/2024/01/Hero-MAVRICK.jpg') no-repeat center center/cover;
+            background: url('img/Hero-MAVRICK-2.svg') no-repeat center center/cover;
             position: relative;
             color: var(--white-color);
         }
@@ -203,7 +203,8 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 20px;
-            max-width: 600px;
+            /* max-width: 600px; */
+            font-variant: all-small-caps;
         }
 
         .hero-content p {
@@ -282,6 +283,15 @@
             padding: 20px;
             font-size: 1.4rem;
         }
+
+        .categorie-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; /* Optional: helps with layout */
+}
+
+
+
 
         /* Brand Grid Customization */
         .brand-grid {
@@ -536,3 +546,5 @@
 .swiper-button-next {
     right: 0;
 }
+
+
