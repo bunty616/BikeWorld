@@ -64,9 +64,9 @@
         }
 
         .nav-links {
-            display: flex;
+            display: -webkit-inline-box;
             list-style: none;
-            gap: 30px;
+            gap: 35px;
         }
 
         .nav-links a {
