@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm currently working on Bike Showroom website<br>I'm learning react and next.js 
+My Name is Sachin Bhardwaj <br>I'm working as full stack developer <br>And i'm pusuing my Msc(IT) A.I course from Mumbai university
 
 
 ## 🌐 Socials:
